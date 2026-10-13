@@ -21,6 +21,7 @@ QDesign
    .. autoattribute:: QDesign.qgeometry
    .. autoattribute:: QDesign.qnet
    .. autoattribute:: QDesign.renderers
+   .. autoattribute:: QDesign.skipped_renderers
    .. autoattribute:: QDesign.template_options
    .. autoattribute:: QDesign.template_renderer_options
    .. autoattribute:: QDesign.variables
@@ -31,6 +32,7 @@ QDesign
    
    .. rubric:: Methods
    
+   .. automethod:: QDesign.__getitem__
    .. automethod:: QDesign.add_default_data_for_qgeometry_tables
    .. automethod:: QDesign.add_dependency
    .. automethod:: QDesign.all_component_names_id

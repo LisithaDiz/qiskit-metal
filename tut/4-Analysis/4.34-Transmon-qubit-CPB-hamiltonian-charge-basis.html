@@ -6,12 +6,12 @@
 <link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="The Cross Resonance (CR) Gate" href="Design-and-Simulation-of-a-Cross-Resonance-Gate.html"><link rel="prev" title="4.33 Transmon Analytics" href="4.33-Transmon-analytics.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>4.34 Modeling transmon qubit Cooper-pair box Hamiltonian in the charge basis - Quantum Metal 0.8.0</title>
+        <title>4.34 Modeling transmon qubit Cooper-pair box Hamiltonian in the charge basis - Quantum Metal 0.9.0</title>
       <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/qiskit-sphinx-theme.css?v=8ff9dcb6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/qiskit-sphinx-theme.css?v=fc6d6d93" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css?v=8ee2c72c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css?v=f676e775" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -158,7 +158,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">Quantum Metal 0.8.0</div></a>
+      <a href="../../index.html"><div class="brand">Quantum Metal 0.9.0</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -180,7 +180,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">Quantum Metal 0.8.0</span>
+  <span class="sidebar-brand-text">Quantum Metal 0.9.0</span>
   
 </a>
 <form class="sidebar-search-container" method="get" action="../../search.html" role="search">
@@ -203,6 +203,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../1-Overview/1.3-Build-a-4-qubit-chip.html">1.3 Build a 4-qubit chip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../1-Overview/1.4-Saving-Your-Chip-Design.html">1.4 Saving Your Chip Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../1-Overview/1.5-Parametric-design---iterate-and-compare.html">1.5 Parametric Design: Iterate and Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.41-The-package-mode-on-paper.html">4.41 The Package Mode on Paper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.42-Four-ways-to-measure-a-coupling.html">4.42 Four Ways to Measure a Coupling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.43-Mesh-and-solve-the-10x10-processor.html">4.43 Mesh and Solve the 10 × 10 Processor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.44-Every-coupling-from-one-eigenmode.html">4.44 Every Coupling from One Eigenmode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.45-Four-methods-one-full-wave-model.html">4.45 Four Methods, One Full-Wave Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.01-How-to-use-a-QComponent.html">2.01 QComponent lifecycle — use, copy, delete, rename</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.11-Routing-101.html">2.11 Routing 101</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.12-Simple-Meander.html">2.12 Simple Meander</a></li>
@@ -213,6 +218,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.22-Design-100-qubits-programmatically.html">2.22 Design 100 qubits programmatically</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.23-Modify-chip-options.html">2.23 Modify chip options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.24-Design-rule-checking.html">Design rule checking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/FlipChip-design-tutorial.html">Flip-Chip Devices in Quantum Metal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.31-Create-a-QComponent-Basic.html">2.31 Create a QComponent - Basic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.32-Create-a-QComponent-Advanced.html">2.32 Create a QComponent - Advanced</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.33-Add-my-QComponent-to-a-reusable-python-file.html">2.33 Add my QComponent to a reusable python file</a></li>
@@ -239,15 +245,18 @@
 <li class="toctree-l2"><a class="reference internal" href="4.21-Capacitance-matrix.html">4.21 Sweeps - Capacitance matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.22-Eigenmode-matrix.html">4.22 Sweeps - Eigenmode matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.23-Impedance-and-scattering-Z-S-Y-matrices.html">4.23 Sweeps - Impedance, scattering and admittance (Z S Y) matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyaedt-multiplanar/DrivenModal-pyaedt-multiplanar.html">HFSS Driven Modal Simulation of a MultiPlanar Design with pyaedt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyaedt-multiplanar/Eigenmode-pyaedt-multiplanar.html">Running Eigenmode Simulations &amp; EPR Analysis with <code class="docutils literal notranslate"><span class="pre">QHFSSEigenmodePyaedt</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyaedt-multiplanar/Q3D-pyaedt-multiplanar.html">Q3D Capacitance Matrix of a MultiPlanar Design with pyaedt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.31-Plot-quantum-oscillator-wavefunction.html">4.31 Plotting Wavefunctions of the Quantum Harmonic Oscillator (LC Circuit)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.32-Transmon-analytics-HCPB.html">4.32 Transmon Analytics: Plotting Eigenvalues as a Function of Offset Charge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.33-Transmon-analytics.html">4.33 Transmon Analytics</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">4.34 Modeling transmon qubit Cooper-pair box Hamiltonian in the charge basis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Design-and-Simulation-of-a-Cross-Resonance-Gate.html">The Cross Resonance (CR) Gate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cQED-with-the-Jaynes-Cummings-Interaction-Model.html">Circuit Quantum Electrodynamics (cQED) and the Jaynes-Cummings Interaction Model Using the HCPB Class and QuTip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/Reference-design-1-Transmon-with-readout-resonator.html">Reference design 1 — Transmon with readout resonator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/Reference-design-2-Two-coupled-transmons.html">Reference design 2 — Two coupled transmons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/Reference-design-3-Four-qubit-multiplexed-readout.html">Reference design 3 — Four-qubit multiplexed readout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/A.1-Transmon-with-readout-resonator.html">A.1 Reference design — Transmon with readout resonator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/A.2-Two-coupled-transmons.html">A.2 Reference design — Two coupled transmons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/A.3-Four-qubit-multiplexed-readout.html">A.3 Reference design — Four-qubit multiplexed readout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quick-topics/JJ-Demo-Notebook.html">Josephson Junction QComponent Demo Notebook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quick-topics/Managing-pins.html">Managing pins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quick-topics/Managing-variables.html">Managing variables</a></li>
@@ -257,8 +266,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../quick-topics/Testing-QComponents-for-overlap-and-collisions.html">Demo Notebook Demonstrating How to Test for Component/CPW Overlap</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../qcomponents-gallery.html">QComponent Gallery</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../circuit-examples/index.html">Example Designs</a><input aria-label="Toggle navigation of Example Designs" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/52-Barends_5Qubit_Xmon_Processor.html">Google style — 5-Qubit Xmon Processor (Barends et al.)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/53-Wallraff_17Qubit_SurfaceCode.html">Wallraff group (ETH Zurich) — 17-Qubit Distance-3 Surface Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/54-Wallraff_TwoQubit_Cell_Mesh.html">Two-Qubit Cell of the 17-Qubit Chip — Mesh for Simulation (gmsh)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/51-Four_qubit_chip.html">IBM-era Qiskit Metal example — Four-Qubit Chip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/Full-Physical-Design-of-iSWAP-Gates.html">Three Published iSWAP Gates — Full Chips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2-From-components-to-chip/2.22-Design-100-qubits-programmatically.html">100-Qubit Mockup (algorithmic design, no routing)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.4-Full-chip-design.html">Full Chip Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/01-Transmon_cross.html">Single Transmon - Grounded (xmon)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/02-Transmon_floating.html">Single Transmon - Floating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/03-concentric_transmon.html">Concentric Transmon</a></li>
@@ -270,26 +285,29 @@
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/09-JJ-Manhattan.html">Josephson Junction (Manhattan)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/10-Transmon_floating_teeth.html">Single Transmon - Floating with teeth</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/11-Star_shaped_qubit.html">Star shaped qubit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/B.Resonators/11-Resonator_Meander.html">Simple CPW Meander</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/C.Composite-bi-partite/21-OneTransmonsWithMeanderAndOTG.html">Transmon coupled to CPW resonator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/D.Qubit-couplers/31-TwoCrossmonsTunableCoupler.html">Tunable Coupler (MIT)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/D.Qubit-couplers/32-TwoTransmonsDirectCoupling.html">Direct Coupler (transmon-transmon)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/D.Qubit-couplers/33-TwoTransmonsWithMeander.html">Bus Resonator Coupler (transmon-transmon)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/B.Resonators/11-Resonator_Meander.html">Simple CPW Meander</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/C.Composite-bi-partite/21-OneTransmonsWithMeanderAndOTG.html">Transmon coupled to CPW resonator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/E.Input-output-coupling/41-LaunchPad.html">CPW Launch Pad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/E.Input-output-coupling/42-ResonatorAndLaunchPad.html">Readout line</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/E.Input-output-coupling/43-TransmonPocketCL.html">Charge Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/51-Four_qubit_chip.html">Four Qubit Chip Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/Example-full-chip-design.html">Example full chip design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/Example-used-in-the-launch-video.html">Launch Videos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/Exercise-for-the-South-Korea-Hackathon%2720.html">South Korea Qiskit Hackathon’20 - Qiskit Metal exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.4-Full-chip-design.html">A.4 Full chip design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.5-Launch-video-example.html">A.5 Launch video example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.6-Hackathon-exercise-South-Korea-2020.html">A.6 Hackathon exercise — South Korea 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.7-IMS-2022-workshop.html">A.7 Qiskit Metal tutorial for IMS 2022</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../qcomponents-gallery.html">QComponent Gallery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../videoseducation.html">Videos &amp; Education</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">How It Works</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../workflow.html">Quantum Metal Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../quantization.html">Quantization Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../simulation-pathways.html">Simulation Pathways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gui-shortcuts.html">GUI Navigation &amp; Shortcuts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
@@ -317,6 +335,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.Rectangle.html">Rectangle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.RectangleHollow.html">RectangleHollow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.Cap3Interdigital.html">Cap3Interdigital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.CapFingerInFrame.html">CapFingerInFrame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.CapNInterdigital.html">CapNInterdigital</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.ResonatorCoilRect.html">ResonatorCoilRect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.CoupledLineTee.html">CoupledLineTee</a></li>
@@ -337,6 +356,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.RouteAnchors.html">RouteAnchors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.RouteMixed.html">RouteMixed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.RoutePathfinder.html">RoutePathfinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.PolylineCPW.html">PolylineCPW</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.jj_dolan.html">jj_dolan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.jj_manhattan.html">jj_manhattan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.TransmonConcentric.html">TransmonConcentric</a></li>
@@ -477,7 +497,7 @@
 <p>This module models the transmon qubit in the cooper-pair charge basis, assuming wrapped junction phase variable. The Hamiltonian is given by:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[\hat{H}=4E_{C}\left(\hat{n}-n_{g}\right)-E_{J}\cos\left(\hat{\phi}\right)\,,\]</div>
+\[\hat{H}=4E_{C}\left(\hat{n}-n_{g}\right)^{2}-E_{J}\cos\left(\hat{\phi}\right)\,,\]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(E_{C}\)</span> is the charging energy, <span class="math notranslate nohighlight">\(E_{J}\)</span> is the Josephson energy, <span class="math notranslate nohighlight">\(\hat n\)</span> is the number of Cooper pairs transferred between charge islands, <span class="math notranslate nohighlight">\(\hat{\phi}\)</span> is the gauge-invariant phase difference between charge islands, and <span class="math notranslate nohighlight">\(n_{g}\)</span> is effective offset charge of the device. Expressions for the charging energy, Josephson energy and offset charge can be written as:</p>
 <div class="math-wrapper docutils container">
@@ -500,7 +520,7 @@
 <div class="math notranslate nohighlight">
 \[H=4E_\text{C}(\hat{n}-n_g)^2-\frac{1}{2}E_\text{J}\sum_n(|n\rangle\langle n+1|+\text{h.c.}),\]</div>
 </div>
-<p>Where <span class="math notranslate nohighlight">\(\hat{n} = \sum_{n=-\inf}^{\inf} |n\rangle\langle n|\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\hat{n} = \sum_{n=-\infty}^{\infty} n\,|n\rangle\langle n|\)</span>.</p>
 <section id="Hcpb-class">
 <h2>Hcpb class<a class="headerlink" href="#Hcpb-class" title="Link to this heading">¶</a></h2>
 <p>Hamiltonian-model Cooper pair box (Hcpb) class.</p>
@@ -550,7 +570,7 @@ energy:</p>
 
 <span class="c1"># For a given value of offset charge (ng, represented by x) we will calculate the CPB Hamiltonian using the previously assigned values of E_J and E_C. Then we calculate the eigenvalue for a given value of m.</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-    <span class="n">H</span> <span class="o">=</span> <span class="n">Hcpb</span><span class="p">(</span><span class="n">nlevels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">Ej</span><span class="o">=</span><span class="mf">1000.0</span><span class="p">,</span> <span class="n">Ec</span><span class="o">=</span><span class="mf">1000.0</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">Hcpb</span><span class="p">(</span><span class="n">nlevels</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">Ej</span><span class="o">=</span><span class="mf">1000.0</span><span class="p">,</span> <span class="n">Ec</span><span class="o">=</span><span class="mf">1000.0</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
     <span class="n">E0</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">norm</span><span class="p">)</span>
     <span class="n">E1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">norm</span><span class="p">)</span>
     <span class="n">E2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">norm</span><span class="p">)</span>
@@ -558,12 +578,12 @@ energy:</p>
 <span class="c1"># define the minimum of E0 and set this to E=0</span>
 <span class="n">floor</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">E0</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E0</span> <span class="o">-</span> <span class="n">floor</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=0&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E1</span> <span class="o">-</span> <span class="n">floor</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=1&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E2</span> <span class="o">-</span> <span class="n">floor</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=2&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;ng&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Em/E01&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Energy Level:&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E0</span> <span class="o">-</span> <span class="n">floor</span><span class="p">,</span> <span class="s2">"k"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=0"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E1</span> <span class="o">-</span> <span class="n">floor</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=1"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E2</span> <span class="o">-</span> <span class="n">floor</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=2"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"ng"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Em/E01"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Energy Level:"</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -573,7 +593,7 @@ energy:</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x17b6c6d50&gt;
+&lt;matplotlib.legend.Legend at 0x7f96df50e660&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -598,10 +618,10 @@ energy:</p>
 <span class="n">H_CPB_analytic</span> <span class="o">=</span> <span class="n">Hcpb_analytic</span><span class="p">(</span><span class="n">Ej</span><span class="o">=</span><span class="mf">13971.3</span><span class="p">,</span> <span class="n">Ec</span><span class="o">=</span><span class="mf">295.2</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
 
 <span class="c1"># print and compare energies</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E0 (HCPB):&quot;</span><span class="p">,</span> <span class="n">H_CPB</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E0 (HCPB analytic):&quot;</span><span class="p">,</span> <span class="n">H_CPB_analytic</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"E0 (HCPB):"</span><span class="p">,</span> <span class="n">H_CPB</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"E0 (HCPB analytic):"</span><span class="p">,</span> <span class="n">H_CPB_analytic</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span>
-    <span class="s2">&quot;Error:&quot;</span><span class="p">,</span>
+    <span class="s2">"Error:"</span><span class="p">,</span>
     <span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="n">H_CPB_analytic</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="n">H_CPB</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="o">/</span> <span class="n">H_CPB_analytic</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
 <span class="p">)</span>
 </pre></div>
@@ -621,18 +641,19 @@ Error: 3.2554285453597023e-14
 </section>
 <section id="Wavefunctions">
 <h3>Wavefunctions<a class="headerlink" href="#Wavefunctions" title="Link to this heading">¶</a></h3>
-<p>Let’s define a new Hamiltonian, this time with <span class="math notranslate nohighlight">\(E_{J} &gt;&gt; E_{C}\)</span> and an offset charge of <span class="math notranslate nohighlight">\(ng=0.001\)</span>. We can calculate the transition energy between the lowest two states as well as the anharmonicity with the following:</p>
+<p>Let’s define a new Hamiltonian, this time with <span class="math notranslate nohighlight">\(E_{J} &gt;&gt; E_{C}\)</span> and an offset charge of <span class="math notranslate nohighlight">\(ng=0.001\)</span>. We can calculate the transition energy between the lowest two states as well as the anharmonicity with the following. <code class="docutils literal notranslate"><span class="pre">nlevels</span></code> sets the charge-basis cutoff: the Hamiltonian is built on the <span class="math notranslate nohighlight">\(2\,n_\mathrm{levels}+1\)</span> charge states <span class="math notranslate nohighlight">\(n = -n_\mathrm{levels}, \dots, n_\mathrm{levels}\)</span>. At <span class="math notranslate nohighlight">\(E_J/E_C \approx 47\)</span> the low-lying states spread over several charge states, and the
+cutoff must include them all: <code class="docutils literal notranslate"><span class="pre">nlevels=15</span></code> (the default) is converged (any <code class="docutils literal notranslate"><span class="pre">nlevels</span></code> <span class="math notranslate nohighlight">\(\geq 8\)</span> agrees to 1 kHz), while <code class="docutils literal notranslate"><span class="pre">nlevels=3</span></code> would give <span class="math notranslate nohighlight">\(\omega_{01}/2\pi \approx 5604\)</span> MHz and <span class="math notranslate nohighlight">\(\alpha/2\pi \approx +11\)</span> MHz, artifacts of the truncation.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">Hcpb</span><span class="p">(</span><span class="n">nlevels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">Ej</span><span class="o">=</span><span class="mf">13971.3</span><span class="p">,</span> <span class="n">Ec</span><span class="o">=</span><span class="mf">295.2</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">Hcpb</span><span class="p">(</span><span class="n">nlevels</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">Ej</span><span class="o">=</span><span class="mf">13971.3</span><span class="p">,</span> <span class="n">Ec</span><span class="o">=</span><span class="mf">295.2</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"""</span>
 <span class="s2">Transmon frequencies</span>
 
 <span class="s2"> ω01/2π = </span><span class="si">{</span><span class="n">H</span><span class="o">.</span><span class="n">fij</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="si">:</span><span class="s2"> 6.0f</span><span class="si">}</span><span class="s2"> MHz</span>
 <span class="s2">   α/2π = </span><span class="si">{</span><span class="n">H</span><span class="o">.</span><span class="n">anharm</span><span class="p">()</span><span class="si">:</span><span class="s2"> 6.0f</span><span class="si">}</span><span class="s2"> MHz</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="s2">"""</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -644,8 +665,8 @@ Error: 3.2554285453597023e-14
 
 Transmon frequencies
 
- ω01/2π =   5604 MHz
-   α/2π =     11 MHz
+ ω01/2π =   5431 MHz
+   α/2π =   -341 MHz
 
 </pre></div></div>
 </div>
@@ -660,11 +681,11 @@ Transmon frequencies
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">ψ</span><span class="p">,</span> <span class="n">θ</span> <span class="o">=</span> <span class="n">H</span><span class="o">.</span><span class="n">psi_k</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-        <span class="n">θ</span><span class="p">,</span> <span class="n">ψ</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="n">ψ</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;|</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&gt;&quot;</span>
-    <span class="p">)</span>  <span class="c1"># it&#39;s in either quadrature, but not both</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Junction phase θ (wrapped in the interval [-π, π])&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Re(ψ(θ))&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Level&quot;</span><span class="p">)</span>
+        <span class="n">θ</span><span class="p">,</span> <span class="n">ψ</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="n">ψ</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"|</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&gt;"</span>
+    <span class="p">)</span>  <span class="c1"># it's in either quadrature, but not both</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Junction phase θ (wrapped in the interval [-π, π])"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Re(ψ(θ))"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Level"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -674,7 +695,7 @@ Transmon frequencies
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x17c21a990&gt;
+&lt;matplotlib.legend.Legend at 0x7f96dd37cf50&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -703,7 +724,7 @@ Transmon frequencies
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(-2.235479468332647e-09-7.858047694112449e-17j)
+(-4.335351955903066e-12-2.240584357216512e-17j)
 </pre></div></div>
 </div>
 <p>Indeed, we see that the dot product is essentially zero (within numerical precision.) Next, let’s take the inner product of the first eigenstate with itself, checking that we get an output of unity:</p>
@@ -721,8 +742,8 @@ Transmon frequencies
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(0.999999999999998+8.068442187513458e-21j)
-(0.9999999999999996+1.2387650562750623e-20j)
+(0.9999999999999999+0j)
+(0.9999999999999997+0j)
 </pre></div></div>
 </div>
 <p>Indeed we see that the dot products are essentially equal to unity, confirming that the states are appropriately normalized.</p>
@@ -774,14 +795,14 @@ Transmon frequencies
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">epsilon0</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=0&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">epsilon1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=1&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">epsilon2</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=2&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">epsilon3</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=3&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;EJ/Ec&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Epsilon/E01&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Energy Level&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">epsilon0</span><span class="p">,</span> <span class="s2">"k"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=0"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">epsilon1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=1"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">epsilon2</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=2"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">epsilon3</span><span class="p">,</span> <span class="s2">"g"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=3"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s2">"log"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"EJ/Ec"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Epsilon/E01"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Energy Level"</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">"upper right"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -791,7 +812,7 @@ Transmon frequencies
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x17c791bd0&gt;
+&lt;matplotlib.legend.Legend at 0x7f96dd205d10&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -837,13 +858,13 @@ Transmon frequencies
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E00</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m0&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E10</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=1&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E20</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=2&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E30</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=3&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Ej/Ec&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Em0/Ec&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Energy Levels&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E00</span><span class="p">,</span> <span class="s2">"k"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m0"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E10</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=1"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E20</span><span class="p">,</span> <span class="s2">"g"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=2"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">E30</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=3"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Ej/Ec"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Em0/Ec"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Energy Levels"</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -853,7 +874,7 @@ Transmon frequencies
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x17c7e11d0&gt;
+&lt;matplotlib.legend.Legend at 0x7f96dd1d7250&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -884,14 +905,16 @@ anharmonicity is defined as <span class="math notranslate nohighlight">\(\alpha_
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-    <span class="n">H_anharm</span> <span class="o">=</span> <span class="n">Hcpb</span><span class="p">(</span><span class="n">nlevels</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">Ej</span><span class="o">=</span><span class="n">i</span> <span class="o">*</span> <span class="n">E_c</span><span class="p">,</span> <span class="n">Ec</span><span class="o">=</span><span class="n">E_c</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-    <span class="n">alpha</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H_anharm</span><span class="o">.</span><span class="n">anharm</span><span class="p">())</span>
-    <span class="n">alpha_r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H_anharm</span><span class="o">.</span><span class="n">anharm</span><span class="p">()</span> <span class="o">/</span> <span class="n">H_anharm</span><span class="o">.</span><span class="n">fij</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># E01 = 0 at Ej/Ec = 0 and ng = 1/2, so alpha_r is undefined at the first point.</span>
+<span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">divide</span><span class="o">=</span><span class="s2">"ignore"</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="n">H_anharm</span> <span class="o">=</span> <span class="n">Hcpb</span><span class="p">(</span><span class="n">nlevels</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">Ej</span><span class="o">=</span><span class="n">i</span> <span class="o">*</span> <span class="n">E_c</span><span class="p">,</span> <span class="n">Ec</span><span class="o">=</span><span class="n">E_c</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">alpha</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H_anharm</span><span class="o">.</span><span class="n">anharm</span><span class="p">())</span>
+        <span class="n">alpha_r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H_anharm</span><span class="o">.</span><span class="n">anharm</span><span class="p">()</span> <span class="o">/</span> <span class="n">H_anharm</span><span class="o">.</span><span class="n">fij</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
-<p>Note we get a warning here because the relative anharmonicity blows up as Ej/Ec goes to zero. Then we can plot the results:</p>
+<p>At <span class="math notranslate nohighlight">\(E_{J}/E_{C} = 0\)</span> and <span class="math notranslate nohighlight">\(n_{g} = 0.5\)</span> the two lowest charge states are degenerate, so <span class="math notranslate nohighlight">\(E_{01} = 0\)</span> and the relative anharmonicity diverges at the first point (<code class="docutils literal notranslate"><span class="pre">np.errstate</span></code> above silences numpy’s divide-by-zero warning). Then we can plot the results:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
@@ -899,13 +922,13 @@ anharmonicity is defined as <span class="math notranslate nohighlight">\(\alpha_
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Ej/Ec&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;alpha&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Ej/Ec"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"alpha"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha_r</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Ej/Ec&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;alpha_r&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Ej/Ec"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"alpha_r"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -925,7 +948,7 @@ Text(0, 0.5, &#39;alpha_r&#39;)
 <img alt="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_48_1.png" src="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_48_1.png" />
 </div>
 </div>
-<p>Indeed we see that the anharmonicity decays with the inverse of <span class="math notranslate nohighlight">\(E_{J}/E_{C}\)</span> for small values of <span class="math notranslate nohighlight">\(E_{J}/E_{C}\)</span> before reaching a minimum just before <span class="math notranslate nohighlight">\(E_{J}/E_{C} \approx 20.0\)</span>, then changing sign and approaching zero as <span class="math notranslate nohighlight">\(E_{J}/E_{C}\)</span> approaches infinity. This matches very closely to the results found in Figure 5 of Phys. Rev. A 76, 042319 (2007).</p>
+<p>The anharmonicity is large and positive for small <span class="math notranslate nohighlight">\(E_{J}/E_{C}\)</span>, changes sign near <span class="math notranslate nohighlight">\(E_{J}/E_{C} \approx 9\)</span>, and the relative anharmonicity reaches its most negative value, <span class="math notranslate nohighlight">\(\alpha_{r} \approx -0.10\)</span>, near <span class="math notranslate nohighlight">\(E_{J}/E_{C} \approx 17.5\)</span>. Beyond that <span class="math notranslate nohighlight">\(\alpha_{r}\)</span> approaches zero from below as <span class="math notranslate nohighlight">\(E_{J}/E_{C}\)</span> grows, while <span class="math notranslate nohighlight">\(\alpha\)</span> itself tends to <span class="math notranslate nohighlight">\(-E_{C}\)</span> (here <span class="math notranslate nohighlight">\(-100\)</span> MHz). This matches Figure 5 of Phys. Rev. A 76, 042319 (2007).</p>
 </section>
 <section id="Dephasing-Time-(T2)">
 <h3>Dephasing Time (T2)<a class="headerlink" href="#Dephasing-Time-(T2)" title="Link to this heading">¶</a></h3>
@@ -939,7 +962,7 @@ Text(0, 0.5, &#39;alpha_r&#39;)
 </pre></div>
 </div>
 </div>
-<p>Next, we’ll just calculate the T2 time as a function of <span class="math notranslate nohighlight">\(E_{J}/E_C{}\)</span>, noting that the output of the Hcpb eigenvalue caluclation is in units of E/h ~ MHz (1E6 Hz). So our calculation simplifies to: <span class="math notranslate nohighlight">\(T_{2} = \frac{1.0}{2*(1E-4)*(1E6) |\epsilon_{1}|}\)</span> where <span class="math notranslate nohighlight">\(\epsilon_{1}\)</span> is the direct output of the Hcpb eigenvalue calculation:</p>
+<p>Next, we’ll just calculate the T2 time as a function of <span class="math notranslate nohighlight">\(E_{J}/E_C{}\)</span>, noting that the output of the Hcpb eigenvalue caluclation is in units of E/h ~ MHz (1E6 Hz). With <span class="math notranslate nohighlight">\(\epsilon_{1} = h \times (10^{6}\,\mathrm{Hz}) \times \epsilon\)</span>, where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the direct output of the Hcpb eigenvalue calculation in MHz, and <span class="math notranslate nohighlight">\(\hbar / h = 1/2\pi\)</span>, our calculation simplifies to: <span class="math notranslate nohighlight">\(T_{2} = \frac{1}{2\pi^{2} \times 10^{-4} \times 10^{6}\,|\epsilon|}\)</span> seconds:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
@@ -949,12 +972,12 @@ Text(0, 0.5, &#39;alpha_r&#39;)
     <span class="n">H_half</span> <span class="o">=</span> <span class="n">Hcpb</span><span class="p">(</span><span class="n">nlevels</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">Ej</span><span class="o">=</span><span class="n">i</span> <span class="o">*</span> <span class="n">E_c</span><span class="p">,</span> <span class="n">Ec</span><span class="o">=</span><span class="n">E_c</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
     <span class="n">H_zero</span> <span class="o">=</span> <span class="n">Hcpb</span><span class="p">(</span><span class="n">nlevels</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">Ej</span><span class="o">=</span><span class="n">i</span> <span class="o">*</span> <span class="n">E_c</span><span class="p">,</span> <span class="n">Ec</span><span class="o">=</span><span class="n">E_c</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
     <span class="n">eps</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">H_half</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">H_zero</span><span class="o">.</span><span class="n">evalue_k</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">T2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1e-4</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1e6</span><span class="p">)</span> <span class="o">*</span> <span class="n">eps</span><span class="p">))</span>
+    <span class="n">T2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="mf">1e-4</span> <span class="o">*</span> <span class="mf">1e6</span> <span class="o">*</span> <span class="n">eps</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">T2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Ej/Ec&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;T2 (sec)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s2">"log"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Ej/Ec"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"T2 (sec)"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1019,7 +1042,7 @@ Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=
 <div class="output_area docutils container">
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=True$$\left(\begin{array}{cc}0 &amp; 1.424 &amp; 6.054\times10^{ -16 } &amp; 0.029 &amp; 5.617\times10^{ -16 } &amp; 0.001\\1.424 &amp; 0 &amp; 1.979 &amp; 3.419\times10^{ -16 } &amp; 0.060 &amp; 3.542\times10^{ -16 }\\6.054\times10^{ -16 } &amp; 1.979 &amp; 0 &amp; 2.379 &amp; 5.365\times10^{ -16 } &amp; 0.100\\0.029 &amp; 3.142\times10^{ -16 } &amp; 2.379 &amp; 0 &amp; 2.690 &amp; 1.849\times10^{ -16 }\\5.617\times10^{ -16 } &amp; 0.060 &amp; 5.365\times10^{ -16 } &amp; 2.690 &amp; 0 &amp; 2.936\\0.001 &amp; 2.431\times10^{ -16 } &amp; 0.100 &amp; 1.849\times10^{ -16 } &amp; 2.936 &amp; 0\end{array}\right)$$</div></div>
+Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=True$$\left(\begin{array}{cc}0 &amp; 1.424 &amp; 1.124\times10^{ -15 } &amp; 0.029 &amp; -2.325\times10^{ -17 } &amp; 0.001\\1.424 &amp; 0 &amp; 1.979 &amp; -3.295\times10^{ -17 } &amp; 0.060 &amp; 2.544\times10^{ -16 }\\1.127\times10^{ -15 } &amp; 1.979 &amp; 0 &amp; 2.379 &amp; 2.065\times10^{ -17 } &amp; 0.100\\0.029 &amp; -2.178\times10^{ -17 } &amp; 2.379 &amp; 0 &amp; 2.690 &amp; 3.248\times10^{ -15 }\\4.170\times10^{ -17 } &amp; 0.060 &amp; -1.043\times10^{ -16 } &amp; 2.690 &amp; 0 &amp; 2.936\\0.001 &amp; 3.940\times10^{ -16 } &amp; 0.100 &amp; 3.269\times10^{ -15 } &amp; 2.936 &amp; 0\end{array}\right)$$</div></div>
 </div>
 </div>
 <p>We can use these matrices to perform some additional analysis. As an example, we can plot the fluctuation in the number of Cooper pairs as a function of <span class="math notranslate nohighlight">\(E_{J} / E_{C}\)</span> for the first three energy levels. This requires calculating the variance in the number of Cooper pairs, defined as: <span class="math notranslate nohighlight">\(\sqrt{&lt;n^2&gt; - &lt;n&gt;^2 }\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is calculated for a given energy level m.</p>
@@ -1059,12 +1082,12 @@ Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">var0</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=0&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">var1</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=1&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">var2</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;m=2&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Ej/Ec&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Variance&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Energy Levels&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">var0</span><span class="p">,</span> <span class="s2">"k"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=0"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">var1</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=1"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">var2</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"m=2"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Ej/Ec"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Variance"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Energy Levels"</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1074,7 +1097,7 @@ Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x17cb0cbd0&gt;
+&lt;matplotlib.legend.Legend at 0x7f96dcd89310&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1110,13 +1133,13 @@ Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m10</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;&lt;1|n|0&gt;&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m20</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;&lt;2|n|0&gt;&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m30</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;&lt;3|n|0&gt;&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m21</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;&lt;2|n|1&gt;&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Ej/Ec&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;&lt;i|n|j&gt;&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Energy Levels&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m10</span><span class="p">,</span> <span class="s2">"k"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"&lt;1|n|0&gt;"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m20</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"&lt;2|n|0&gt;"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m30</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"&lt;3|n|0&gt;"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m21</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"&lt;2|n|1&gt;"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Ej/Ec"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"&lt;i|n|j&gt;"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Energy Levels"</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1126,7 +1149,7 @@ Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x17ccb8f10&gt;
+&lt;matplotlib.legend.Legend at 0x7f96dcc15bd0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1141,7 +1164,7 @@ Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=
 </section>
 <section id="Experimental">
 <h2>Experimental<a class="headerlink" href="#Experimental" title="Link to this heading">¶</a></h2>
-<p>Let’s use the “params_from_spectrum” function to calculate the target Ej and Ec values for a desired transmon frequency and anharmonicity. We’ll use values of Ej=13971.3 MHz and Ec=295.2 MHz.</p>
+<p>Let’s use the <code class="docutils literal notranslate"><span class="pre">params_from_spectrum</span></code> function to calculate the target Ej and Ec values for a desired transmon frequency and anharmonicity. As targets we take <span class="math notranslate nohighlight">\(\omega_{01}/2\pi = 5431\)</span> MHz and <span class="math notranslate nohighlight">\(\alpha/2\pi = -341\)</span> MHz, the rounded values of the transmon above (Ej = 13971.3 MHz, Ec = 295.2 MHz at <span class="math notranslate nohighlight">\(n_g = 0.001\)</span>). Note that <code class="docutils literal notranslate"><span class="pre">H</span></code> is now the last Hamiltonian of the loop above, at <span class="math notranslate nohighlight">\(n_g = 0.5\)</span>; the fit keeps that <span class="math notranslate nohighlight">\(n_g\)</span>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
@@ -1150,7 +1173,7 @@ Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=
 <span class="n">ω</span><span class="p">,</span> <span class="n">α</span> <span class="o">=</span> <span class="mi">5431</span><span class="p">,</span> <span class="o">-</span><span class="mi">341</span>
 <span class="n">EjEc</span> <span class="o">=</span> <span class="n">H</span><span class="o">.</span><span class="n">params_from_spectrum</span><span class="p">(</span><span class="n">ω</span><span class="p">,</span> <span class="n">α</span><span class="p">)</span>  <span class="c1"># set self.Ej, Cj</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">EjEc</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;transmon frequency:&quot;</span><span class="p">,</span> <span class="n">H</span><span class="o">.</span><span class="n">fij</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;anharmonicity:&quot;</span><span class="p">,</span> <span class="n">H</span><span class="o">.</span><span class="n">anharm</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"transmon frequency:"</span><span class="p">,</span> <span class="n">H</span><span class="o">.</span><span class="n">fij</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">"anharmonicity:"</span><span class="p">,</span> <span class="n">H</span><span class="o">.</span><span class="n">anharm</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -1159,17 +1182,18 @@ Quantum object: dims=[[6], [6]], shape=(6, 6), type='oper', dtype=Dense, isherm=
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[13952.85838241   295.62150486]
-transmon frequency: 5430.998862440552 anharmonicity: -341.001148518254
+[13952.89933312   295.62065529]
+transmon frequency: 5431.000000000001 anharmonicity: -340.99999999999545
 </pre></div></div>
 </div>
+<p>The fit reproduces the targets, but returns Ej ≈ 13953 MHz and Ec ≈ 295.6 MHz rather than 13971.3 and 295.2 MHz: at <span class="math notranslate nohighlight">\(n_g = 0.5\)</span> the transmon above has <span class="math notranslate nohighlight">\(\alpha/2\pi = -340.4\)</span> MHz (its charge dispersion shifts <span class="math notranslate nohighlight">\(\alpha\)</span> by about 0.6 MHz at this <span class="math notranslate nohighlight">\(E_J/E_C \approx 47\)</span>), and the targets are rounded. With that transmon’s own <span class="math notranslate nohighlight">\(n_g = 0.5\)</span> values of <span class="math notranslate nohighlight">\(\omega_{01}\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> as targets the fit returns 13971.3 and 295.2 MHz.</p>
 <p>We can also calculate the value of Ej given the value of Ec and the transmon frequency:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ej</span> <span class="o">=</span> <span class="n">H</span><span class="o">.</span><span class="n">params_from_freq_fixEC</span><span class="p">(</span><span class="n">ω</span><span class="p">,</span> <span class="mf">295.17</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ej:&quot;</span><span class="p">,</span> <span class="n">Ej</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Ej:"</span><span class="p">,</span> <span class="n">Ej</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1178,10 +1202,10 @@ transmon frequency: 5430.998862440552 anharmonicity: -341.001148518254
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Ej: 14424.68223617939
+Ej: 13971.730305104767
 </pre></div></div>
 </div>
-<p>We see that this is close to the starting vaue of 13971.3 MHz that we began with.</p>
+<p>We see that this is close to the starting value of 13971.3 MHz that we began with; the small difference comes from the rounded Ec (295.17 MHz) and target frequency.</p>
 </section>
 <section id="New-section-on-integrating-sc_qubits.">
 <h2>New section on integrating sc_qubits.<a class="headerlink" href="#New-section-on-integrating-sc_qubits." title="Link to this heading">¶</a></h2>
@@ -1190,7 +1214,19 @@ Ej: 14424.68223617939
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">scqubits</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">scq</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib_inline.backend_inline</span><span class="w"> </span><span class="kn">import</span> <span class="n">set_matplotlib_formats</span>
+
+<span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+    <span class="c1"># scqubits 4.3 has an invalid escape sequence in one module (SyntaxWarning</span>
+    <span class="c1"># when it is first compiled); unrelated to this tutorial.</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">,</span> <span class="ne">SyntaxWarning</span><span class="p">)</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">scqubits</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">scq</span>
+
+<span class="c1"># keep the stored outputs free of progress bars</span>
+<span class="n">scq</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">PROGRESSBAR_DISABLED</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">set_matplotlib_formats</span><span class="p">(</span><span class="s2">"png"</span><span class="p">)</span>  <span class="c1"># scqubits switches inline figures to pdf + svg</span>
 </pre></div>
 </div>
 </div>
@@ -1206,8 +1242,8 @@ Ej: 14424.68223617939
     <span class="n">truncated_dim</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>  <span class="c1"># after diagonalization, we will keep 3 levels</span>
 <span class="p">)</span>
 <span class="n">evals</span> <span class="o">=</span> <span class="n">qubit</span><span class="o">.</span><span class="n">eigenvals</span><span class="p">(</span><span class="n">evals_count</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;freq = </span><span class="si">{</span><span class="p">(</span><span class="n">evals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">evals</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> MHz&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;alpha = </span><span class="si">{</span><span class="p">((</span><span class="n">evals</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">evals</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">evals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">evals</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> MHz&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"freq = </span><span class="si">{</span><span class="p">(</span><span class="n">evals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">evals</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> MHz"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"alpha = </span><span class="si">{</span><span class="p">((</span><span class="n">evals</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">evals</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">evals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">evals</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> MHz"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1225,7 +1261,7 @@ alpha = -341 MHz
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qubit</span><span class="o">.</span><span class="n">plot_n_wavefunction</span><span class="p">()</span>
-<span class="n">qubit</span><span class="o">.</span><span class="n">plot_phi_wavefunction</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;real&quot;</span><span class="p">)</span>
+<span class="n">qubit</span><span class="o">.</span><span class="n">plot_phi_wavefunction</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s2">"real"</span><span class="p">)</span>
 <span class="n">qubit</span><span class="o">.</span><span class="n">hamiltonian</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1248,21 +1284,21 @@ array([[1889.24005846,   -6.98562051,    0.        , ...,    0.        ,
        [   0.        ,    0.        ,    0.        , ...,   -6.98562051,
         1795.77694133,   -6.98562051],
        [   0.        ,    0.        ,    0.        , ...,    0.        ,
-          -6.98562051, 1889.0511439 ]])
+          -6.98562051, 1889.0511439 ]], shape=(81, 81))
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_83_1.svg" src="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_83_1.svg" />
+<img alt="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_83_1.png" src="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_83_1.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_83_2.svg" src="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_83_2.svg" />
+<img alt="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_83_2.png" src="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_83_2.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1272,21 +1308,15 @@ array([[1889.24005846,   -6.98562051,    0.        , ...,    0.        ,
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">ng_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">220</span><span class="p">)</span>
-<span class="n">qubit</span><span class="o">.</span><span class="n">plot_evals_vs_paramvals</span><span class="p">(</span><span class="s2">&quot;ng&quot;</span><span class="p">,</span> <span class="n">ng_list</span><span class="p">,</span> <span class="n">evals_count</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">subtract_ground</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+<span class="n">qubit</span><span class="o">.</span><span class="n">plot_evals_vs_paramvals</span><span class="p">(</span><span class="s2">"ng"</span><span class="p">,</span> <span class="n">ng_list</span><span class="p">,</span> <span class="n">evals_count</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">subtract_ground</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f7c2c200922342838405eb604c8418d0", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_84_1.svg" src="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_84_1.svg" />
+<img alt="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_84_0.png" src="../../_images/tut_4-Analysis_4.34-Transmon-qubit-CPB-hamiltonian-charge-basis_84_0.png" />
 </div>
 </div>
 </section>
@@ -1294,7 +1324,7 @@ array([[1889.24005846,   -6.98562051,    0.        , ...,    0.        ,
 <h2>Transmon and the Oscillator<a class="headerlink" href="#Transmon-and-the-Oscillator" title="Link to this heading">¶</a></h2>
 <p>This section is currently in development.</p>
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"067cad29f7384401a7fedd1595c4cc90": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "FloatProgressModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_1302a00e59f242ff9dbc2a4f69e61510", "max": 220.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_1cd1e03077e341c3afa5fe61bdbb98e1", "tabbable": null, "tooltip": null, "value": 220.0}}, "1302a00e59f242ff9dbc2a4f69e61510": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "1cd1e03077e341c3afa5fe61bdbb98e1": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "ProgressStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "598d772377334141b876d2057ee5365c": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "7789303d3f5049f9b690061d31712ba7": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_598d772377334141b876d2057ee5365c", "placeholder": "\u200b", "style": "IPY_MODEL_f7b16b5ea48241bdb6e470b5750207a1", "tabbable": null, "tooltip": null, "value": "\u20070/220\u2007[00:00&lt;?,\u2007?it/s]"}}, "83cab63c703f4d928e01891620be3bda": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_c1e1d7135bb543e18e681ee237309474", "placeholder": "\u200b", "style": "IPY_MODEL_e318c66e50d844ab8f9f92b1bd9b5153", "tabbable": null, "tooltip": null, "value": "Spectral\u2007data:\u2007\u2007\u20070%"}}, "c1e1d7135bb543e18e681ee237309474": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "e318c66e50d844ab8f9f92b1bd9b5153": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "e823ddd15a604c8eb7607a84d7f6713b": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": "hidden", "width": null}}, "f7b16b5ea48241bdb6e470b5750207a1": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "f7c2c200922342838405eb604c8418d0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HBoxModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_83cab63c703f4d928e01891620be3bda", "IPY_MODEL_067cad29f7384401a7fedd1595c4cc90", "IPY_MODEL_7789303d3f5049f9b690061d31712ba7"], "layout": "IPY_MODEL_e823ddd15a604c8eb7607a84d7f6713b", "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}
+{"state": {"02bf0c17656d450eb53659349eff3336": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "04db6670a06e493fb2da8feff00aa5e0": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5794d67456fd4a5691b34e267468faf9": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_02bf0c17656d450eb53659349eff3336", "placeholder": "\u200b", "style": "IPY_MODEL_f16592a93cf34396a15d2f0dcd80598a", "tabbable": null, "tooltip": null, "value": "\u20070/220\u2007[00:00&lt;?,\u2007?it/s]"}}, "5c74b0b999df47c0a4482535a9f478a9": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "ProgressStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "8513bc12da2b4d72a9c67067edb1770c": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HBoxModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_aa5ae2244c6a465993a8cd8af2d56943", "IPY_MODEL_ba4dc7705b564daf8fe1e30bd89db63d", "IPY_MODEL_5794d67456fd4a5691b34e267468faf9"], "layout": "IPY_MODEL_fd07db49776644c9806ba9be6ca98832", "tabbable": null, "tooltip": null}}, "a03cf6b35b834d4ba2b07e2c23826641": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "a96f65da61074cb980ba1c769a11b5b5": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "aa5ae2244c6a465993a8cd8af2d56943": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_a96f65da61074cb980ba1c769a11b5b5", "placeholder": "\u200b", "style": "IPY_MODEL_a03cf6b35b834d4ba2b07e2c23826641", "tabbable": null, "tooltip": null, "value": "Spectral\u2007data:\u2007\u2007\u20070%"}}, "ba4dc7705b564daf8fe1e30bd89db63d": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "FloatProgressModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_04db6670a06e493fb2da8feff00aa5e0", "max": 220.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_5c74b0b999df47c0a4482535a9f478a9", "tabbable": null, "tooltip": null, "value": 220.0}}, "f16592a93cf34396a15d2f0dcd80598a": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "fd07db49776644c9806ba9be6ca98832": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": "hidden", "width": null}}}, "version_major": 2, "version_minor": 0}
 </script></section>
 </section>
 <br><br>
@@ -1361,7 +1391,7 @@ array([[1889.24005846,   -6.98562051,    0.        , ...,    0.        ,
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2026/08/07</div>
+              Last updated on 2026/10/13</div>
           </div>
           <div class="right-details">
             
@@ -1417,7 +1447,7 @@ array([[1889.24005846,   -6.98562051,    0.        , ...,    0.        ,
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=486e5634"></script>
+</div><script src="../../_static/documentation_options.js?v=39bb1c6d"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/furo.js?v=46bd48cc"></script>

@@ -3,15 +3,15 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="2.31 Create a QComponent - Basic" href="2.31-Create-a-QComponent-Basic.html"><link rel="prev" title="2.23 Modify chip options" href="2.23-Modify-chip-options.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Flip-Chip Devices in Quantum Metal" href="FlipChip-design-tutorial.html"><link rel="prev" title="2.23 Modify chip options" href="2.23-Modify-chip-options.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Design rule checking - Quantum Metal 0.8.0</title>
+        <title>Design rule checking - Quantum Metal 0.9.0</title>
       <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/qiskit-sphinx-theme.css?v=8ff9dcb6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/qiskit-sphinx-theme.css?v=fc6d6d93" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css?v=8ee2c72c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css?v=f676e775" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -158,7 +158,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">Quantum Metal 0.8.0</div></a>
+      <a href="../../index.html"><div class="brand">Quantum Metal 0.9.0</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -180,7 +180,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">Quantum Metal 0.8.0</span>
+  <span class="sidebar-brand-text">Quantum Metal 0.9.0</span>
   
 </a>
 <form class="sidebar-search-container" method="get" action="../../search.html" role="search">
@@ -203,6 +203,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../1-Overview/1.3-Build-a-4-qubit-chip.html">1.3 Build a 4-qubit chip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../1-Overview/1.4-Saving-Your-Chip-Design.html">1.4 Saving Your Chip Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../1-Overview/1.5-Parametric-design---iterate-and-compare.html">1.5 Parametric Design: Iterate and Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.41-The-package-mode-on-paper.html">4.41 The Package Mode on Paper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.42-Four-ways-to-measure-a-coupling.html">4.42 Four Ways to Measure a Coupling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.43-Mesh-and-solve-the-10x10-processor.html">4.43 Mesh and Solve the 10 × 10 Processor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.44-Every-coupling-from-one-eigenmode.html">4.44 Every Coupling from One Eigenmode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.45-Four-methods-one-full-wave-model.html">4.45 Four Methods, One Full-Wave Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.01-How-to-use-a-QComponent.html">2.01 QComponent lifecycle — use, copy, delete, rename</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.11-Routing-101.html">2.11 Routing 101</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.12-Simple-Meander.html">2.12 Simple Meander</a></li>
@@ -213,6 +218,7 @@
 <li class="toctree-l2"><a class="reference internal" href="2.22-Design-100-qubits-programmatically.html">2.22 Design 100 qubits programmatically</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.23-Modify-chip-options.html">2.23 Modify chip options</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Design rule checking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FlipChip-design-tutorial.html">Flip-Chip Devices in Quantum Metal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.31-Create-a-QComponent-Basic.html">2.31 Create a QComponent - Basic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.32-Create-a-QComponent-Advanced.html">2.32 Create a QComponent - Advanced</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.33-Add-my-QComponent-to-a-reusable-python-file.html">2.33 Add my QComponent to a reusable python file</a></li>
@@ -239,15 +245,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.21-Capacitance-matrix.html">4.21 Sweeps - Capacitance matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.22-Eigenmode-matrix.html">4.22 Sweeps - Eigenmode matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.23-Impedance-and-scattering-Z-S-Y-matrices.html">4.23 Sweeps - Impedance, scattering and admittance (Z S Y) matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4-Analysis/pyaedt-multiplanar/DrivenModal-pyaedt-multiplanar.html">HFSS Driven Modal Simulation of a MultiPlanar Design with pyaedt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4-Analysis/pyaedt-multiplanar/Eigenmode-pyaedt-multiplanar.html">Running Eigenmode Simulations &amp; EPR Analysis with <code class="docutils literal notranslate"><span class="pre">QHFSSEigenmodePyaedt</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4-Analysis/pyaedt-multiplanar/Q3D-pyaedt-multiplanar.html">Q3D Capacitance Matrix of a MultiPlanar Design with pyaedt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.31-Plot-quantum-oscillator-wavefunction.html">4.31 Plotting Wavefunctions of the Quantum Harmonic Oscillator (LC Circuit)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.32-Transmon-analytics-HCPB.html">4.32 Transmon Analytics: Plotting Eigenvalues as a Function of Offset Charge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.33-Transmon-analytics.html">4.33 Transmon Analytics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4-Analysis/4.34-Transmon-qubit-CPB-hamiltonian-charge-basis.html">4.34 Modeling transmon qubit Cooper-pair box Hamiltonian in the charge basis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4-Analysis/Design-and-Simulation-of-a-Cross-Resonance-Gate.html">The Cross Resonance (CR) Gate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4-Analysis/cQED-with-the-Jaynes-Cummings-Interaction-Model.html">Circuit Quantum Electrodynamics (cQED) and the Jaynes-Cummings Interaction Model Using the HCPB Class and QuTip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/Reference-design-1-Transmon-with-readout-resonator.html">Reference design 1 — Transmon with readout resonator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/Reference-design-2-Two-coupled-transmons.html">Reference design 2 — Two coupled transmons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/Reference-design-3-Four-qubit-multiplexed-readout.html">Reference design 3 — Four-qubit multiplexed readout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/A.1-Transmon-with-readout-resonator.html">A.1 Reference design — Transmon with readout resonator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/A.2-Two-coupled-transmons.html">A.2 Reference design — Two coupled transmons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../full-design-examples/A.3-Four-qubit-multiplexed-readout.html">A.3 Reference design — Four-qubit multiplexed readout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quick-topics/JJ-Demo-Notebook.html">Josephson Junction QComponent Demo Notebook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quick-topics/Managing-pins.html">Managing pins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quick-topics/Managing-variables.html">Managing variables</a></li>
@@ -257,8 +266,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../quick-topics/Testing-QComponents-for-overlap-and-collisions.html">Demo Notebook Demonstrating How to Test for Component/CPW Overlap</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../qcomponents-gallery.html">QComponent Gallery</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../circuit-examples/index.html">Example Designs</a><input aria-label="Toggle navigation of Example Designs" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/52-Barends_5Qubit_Xmon_Processor.html">Google style — 5-Qubit Xmon Processor (Barends et al.)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/53-Wallraff_17Qubit_SurfaceCode.html">Wallraff group (ETH Zurich) — 17-Qubit Distance-3 Surface Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/54-Wallraff_TwoQubit_Cell_Mesh.html">Two-Qubit Cell of the 17-Qubit Chip — Mesh for Simulation (gmsh)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/51-Four_qubit_chip.html">IBM-era Qiskit Metal example — Four-Qubit Chip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/Full-Physical-Design-of-iSWAP-Gates.html">Three Published iSWAP Gates — Full Chips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.22-Design-100-qubits-programmatically.html">100-Qubit Mockup (algorithmic design, no routing)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.4-Full-chip-design.html">Full Chip Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/01-Transmon_cross.html">Single Transmon - Grounded (xmon)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/02-Transmon_floating.html">Single Transmon - Floating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/03-concentric_transmon.html">Concentric Transmon</a></li>
@@ -270,26 +285,29 @@
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/09-JJ-Manhattan.html">Josephson Junction (Manhattan)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/10-Transmon_floating_teeth.html">Single Transmon - Floating with teeth</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/A.Qubits/11-Star_shaped_qubit.html">Star shaped qubit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/B.Resonators/11-Resonator_Meander.html">Simple CPW Meander</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/C.Composite-bi-partite/21-OneTransmonsWithMeanderAndOTG.html">Transmon coupled to CPW resonator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/D.Qubit-couplers/31-TwoCrossmonsTunableCoupler.html">Tunable Coupler (MIT)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/D.Qubit-couplers/32-TwoTransmonsDirectCoupling.html">Direct Coupler (transmon-transmon)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/D.Qubit-couplers/33-TwoTransmonsWithMeander.html">Bus Resonator Coupler (transmon-transmon)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/B.Resonators/11-Resonator_Meander.html">Simple CPW Meander</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/C.Composite-bi-partite/21-OneTransmonsWithMeanderAndOTG.html">Transmon coupled to CPW resonator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/E.Input-output-coupling/41-LaunchPad.html">CPW Launch Pad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/E.Input-output-coupling/42-ResonatorAndLaunchPad.html">Readout line</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/E.Input-output-coupling/43-TransmonPocketCL.html">Charge Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/F.Small-quantum-chips/51-Four_qubit_chip.html">Four Qubit Chip Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/Example-full-chip-design.html">Example full chip design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/Example-used-in-the-launch-video.html">Launch Videos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/Exercise-for-the-South-Korea-Hackathon%2720.html">South Korea Qiskit Hackathon’20 - Qiskit Metal exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.4-Full-chip-design.html">A.4 Full chip design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.5-Launch-video-example.html">A.5 Launch video example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.6-Hackathon-exercise-South-Korea-2020.html">A.6 Hackathon exercise — South Korea 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit-examples/full-design-flow-examples/A.7-IMS-2022-workshop.html">A.7 Qiskit Metal tutorial for IMS 2022</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../qcomponents-gallery.html">QComponent Gallery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../videoseducation.html">Videos &amp; Education</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">How It Works</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../workflow.html">Quantum Metal Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../quantization.html">Quantization Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../simulation-pathways.html">Simulation Pathways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gui-shortcuts.html">GUI Navigation &amp; Shortcuts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
@@ -317,6 +335,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.Rectangle.html">Rectangle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.RectangleHollow.html">RectangleHollow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.Cap3Interdigital.html">Cap3Interdigital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.CapFingerInFrame.html">CapFingerInFrame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.CapNInterdigital.html">CapNInterdigital</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.ResonatorCoilRect.html">ResonatorCoilRect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.CoupledLineTee.html">CoupledLineTee</a></li>
@@ -337,6 +356,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.RouteAnchors.html">RouteAnchors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.RouteMixed.html">RouteMixed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.RoutePathfinder.html">RoutePathfinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.PolylineCPW.html">PolylineCPW</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.jj_dolan.html">jj_dolan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.jj_manhattan.html">jj_manhattan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../apidocs/qiskit_metal.qlibrary.TransmonConcentric.html">TransmonConcentric</a></li>
@@ -558,21 +578,21 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">new_design</span><span class="p">():</span>
     <span class="n">design</span> <span class="o">=</span> <span class="n">designs</span><span class="o">.</span><span class="n">DesignPlanar</span><span class="p">()</span>
     <span class="n">design</span><span class="o">.</span><span class="n">overwrite_enabled</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="n">design</span><span class="o">.</span><span class="n">chips</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">size_x</span> <span class="o">=</span> <span class="s2">&quot;6mm&quot;</span>
-    <span class="n">design</span><span class="o">.</span><span class="n">chips</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">size_y</span> <span class="o">=</span> <span class="s2">&quot;6mm&quot;</span>
+    <span class="n">design</span><span class="o">.</span><span class="n">chips</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">size_x</span> <span class="o">=</span> <span class="s2">"6mm"</span>
+    <span class="n">design</span><span class="o">.</span><span class="n">chips</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">size_y</span> <span class="o">=</span> <span class="s2">"6mm"</span>
     <span class="k">return</span> <span class="n">design</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">ori_start</span><span class="p">,</span> <span class="n">ori_end</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">RouteStraight</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;A CPW between two fresh open terminations -- shorthand for this notebook.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""A CPW between two fresh open terminations -- shorthand for this notebook."""</span>
     <span class="n">OpenToGround</span><span class="p">(</span>
         <span class="n">design</span><span class="p">,</span>
-        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_a&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_a"</span><span class="p">,</span>
         <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos_y</span><span class="o">=</span><span class="n">start</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">orientation</span><span class="o">=</span><span class="n">ori_start</span><span class="p">),</span>
     <span class="p">)</span>
     <span class="n">OpenToGround</span><span class="p">(</span>
         <span class="n">design</span><span class="p">,</span>
-        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_b&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_b"</span><span class="p">,</span>
         <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="n">end</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos_y</span><span class="o">=</span><span class="n">end</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">orientation</span><span class="o">=</span><span class="n">ori_end</span><span class="p">),</span>
     <span class="p">)</span>
     <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
@@ -580,8 +600,8 @@
         <span class="n">name</span><span class="p">,</span>
         <span class="n">options</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span>
             <span class="n">pin_inputs</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span>
-                <span class="n">start_pin</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_a&quot;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="s2">&quot;open&quot;</span><span class="p">),</span>
-                <span class="n">end_pin</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_b&quot;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="s2">&quot;open&quot;</span><span class="p">),</span>
+                <span class="n">start_pin</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_a"</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="s2">"open"</span><span class="p">),</span>
+                <span class="n">end_pin</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_b"</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="s2">"open"</span><span class="p">),</span>
             <span class="p">),</span>
             <span class="o">**</span><span class="n">options</span><span class="p">,</span>
         <span class="p">),</span>
@@ -598,50 +618,50 @@
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">design</span> <span class="o">=</span> <span class="n">new_design</span><span class="p">()</span>
 
-<span class="n">TransmonPocket</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;Q1&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">&quot;0mm&quot;</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">&quot;0mm&quot;</span><span class="p">))</span>
+<span class="n">TransmonPocket</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"Q1"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">"0mm"</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">"0mm"</span><span class="p">))</span>
 
 <span class="c1"># 1. metal-overlap: two CPWs cross. On one layer, that is a short.</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;cross_h&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;-2.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;2mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;-1.2mm&quot;</span><span class="p">,</span> <span class="s2">&quot;2mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;cross_v&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;-1.9mm&quot;</span><span class="p">,</span> <span class="s2">&quot;1.4mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;-1.9mm&quot;</span><span class="p">,</span> <span class="s2">&quot;2.6mm&quot;</span><span class="p">),</span> <span class="s2">&quot;270&quot;</span><span class="p">,</span> <span class="s2">&quot;90&quot;</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"cross_h"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-2.6mm"</span><span class="p">,</span> <span class="s2">"2mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"-1.2mm"</span><span class="p">,</span> <span class="s2">"2mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"cross_v"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"1.4mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"2.6mm"</span><span class="p">),</span> <span class="s2">"270"</span><span class="p">,</span> <span class="s2">"90"</span><span class="p">)</span>
 
 <span class="c1"># 2. metal-spacing: parallel CPWs 1 um apart. Not a short in the CAD, but</span>
 <span class="c1">#    incomplete etching leaves residue that bridges gaps this narrow.</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;near_a&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;0.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;2.0055mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;2.4mm&quot;</span><span class="p">,</span> <span class="s2">&quot;2.0055mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;near_b&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;0.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;1.9945mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;2.4mm&quot;</span><span class="p">,</span> <span class="s2">&quot;1.9945mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"near_a"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"0.6mm"</span><span class="p">,</span> <span class="s2">"2.0055mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"2.4mm"</span><span class="p">,</span> <span class="s2">"2.0055mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"near_b"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"0.6mm"</span><span class="p">,</span> <span class="s2">"1.9945mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"2.4mm"</span><span class="p">,</span> <span class="s2">"1.9945mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
 
 <span class="c1"># 3. cpw-gap: a 1 um gap concentrates field in the lossy substrate interface.</span>
 <span class="n">link</span><span class="p">(</span>
     <span class="n">design</span><span class="p">,</span>
-    <span class="s2">&quot;thin&quot;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s2">&quot;-2.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-2.4mm&quot;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">&quot;-0.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-2.4mm&quot;</span><span class="p">),</span>
-    <span class="s2">&quot;180&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-    <span class="n">trace_gap</span><span class="o">=</span><span class="s2">&quot;1um&quot;</span><span class="p">,</span>
+    <span class="s2">"thin"</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">"-2.6mm"</span><span class="p">,</span> <span class="s2">"-2.4mm"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"-0.6mm"</span><span class="p">,</span> <span class="s2">"-2.4mm"</span><span class="p">),</span>
+    <span class="s2">"180"</span><span class="p">,</span>
+    <span class="s2">"0"</span><span class="p">,</span>
+    <span class="n">trace_gap</span><span class="o">=</span><span class="s2">"1um"</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="c1"># 4. chip-bounds: the launchpad hangs off the die.</span>
 <span class="n">LaunchpadWirebond</span><span class="p">(</span>
-    <span class="n">design</span><span class="p">,</span> <span class="s2">&quot;LP&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">&quot;3.4mm&quot;</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">&quot;0mm&quot;</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;180&quot;</span><span class="p">)</span>
+    <span class="n">design</span><span class="p">,</span> <span class="s2">"LP"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">"3.4mm"</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">"0mm"</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">"180"</span><span class="p">)</span>
 <span class="p">)</span>
 
 <span class="c1"># 5. short-segment: 100 um legs cannot host a 150 um fillet radius.</span>
 <span class="n">link</span><span class="p">(</span>
     <span class="n">design</span><span class="p">,</span>
-    <span class="s2">&quot;kink&quot;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s2">&quot;1.2mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-2.6mm&quot;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">&quot;1.3mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-2.5mm&quot;</span><span class="p">),</span>
-    <span class="s2">&quot;180&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;90&quot;</span><span class="p">,</span>
+    <span class="s2">"kink"</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">"1.2mm"</span><span class="p">,</span> <span class="s2">"-2.6mm"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"1.3mm"</span><span class="p">,</span> <span class="s2">"-2.5mm"</span><span class="p">),</span>
+    <span class="s2">"180"</span><span class="p">,</span>
+    <span class="s2">"90"</span><span class="p">,</span>
     <span class="bp">cls</span><span class="o">=</span><span class="n">RoutePathfinder</span><span class="p">,</span>
-    <span class="n">fillet</span><span class="o">=</span><span class="s2">&quot;150um&quot;</span><span class="p">,</span>
+    <span class="n">fillet</span><span class="o">=</span><span class="s2">"150um"</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="c1"># 6. qubit-clearance: a CPW skimming Q1&#39;s pocket couples to the qubit.</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;hug&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;-1.5mm&quot;</span><span class="p">,</span> <span class="s2">&quot;0.35mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;1.5mm&quot;</span><span class="p">,</span> <span class="s2">&quot;0.35mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="c1"># 6. qubit-clearance: a CPW skimming Q1's pocket couples to the qubit.</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"hug"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-1.5mm"</span><span class="p">,</span> <span class="s2">"0.35mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"1.5mm"</span><span class="p">,</span> <span class="s2">"0.35mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
 
 <span class="c1"># 7. ground-continuity: a CPW reaching both die edges cuts the ground in two.</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;split&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;-2.994mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-1.2mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;2.994mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-1.2mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"split"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-2.994mm"</span><span class="p">,</span> <span class="s2">"-1.2mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"2.994mm"</span><span class="p">,</span> <span class="s2">"-1.2mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
 
 <span class="n">design</span><span class="o">.</span><span class="n">rebuild</span><span class="p">()</span>
 <span class="n">design</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
@@ -653,10 +673,10 @@
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-02:51AM 01s WARNING [check_lengths]: For path table, component=kink, key=trace has short segments that could cause issues with fillet. Values in (1-1)  are index(es) in shapely geometry.
-02:51AM 01s WARNING [check_lengths]: For path table, component=kink, key=cut has short segments that could cause issues with fillet. Values in (1-1)  are index(es) in shapely geometry.
-02:51AM 02s WARNING [check_lengths]: For path table, component=kink, key=trace has short segments that could cause issues with fillet. Values in (1-1)  are index(es) in shapely geometry.
-02:51AM 02s WARNING [check_lengths]: For path table, component=kink, key=cut has short segments that could cause issues with fillet. Values in (1-1)  are index(es) in shapely geometry.
+10:41PM 13s WARNING [check_lengths]: For path table, component=kink, key=trace has short segments that could cause issues with fillet. Values in (1-1)  are index(es) in shapely geometry.
+10:41PM 13s WARNING [check_lengths]: For path table, component=kink, key=cut has short segments that could cause issues with fillet. Values in (1-1)  are index(es) in shapely geometry.
+10:41PM 13s WARNING [check_lengths]: For path table, component=kink, key=trace has short segments that could cause issues with fillet. Values in (1-1)  are index(es) in shapely geometry.
+10:41PM 13s WARNING [check_lengths]: For path table, component=kink, key=cut has short segments that could cause issues with fillet. Values in (1-1)  are index(es) in shapely geometry.
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -728,7 +748,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-10 finding(s) from 7 rule(s): 3 error(s), 7 warning(s)
+10 finding(s) from 11 rule(s): 3 error(s), 7 warning(s)
   [error] metal-overlap: cross_h and cross_v overlap by 100 um^2 of metal on layer 1  @ (-1.9000, 2.0000)
   [error] metal-spacing: near_a and near_b are 1.00 um apart (minimum 2.00 um)  @ (2.4000, 2.0000)
   [warning] cpw-gap: thin has a 1.00 um CPW gap (minimum 3.00 um)  @ (-2.6000, -2.4000)
@@ -749,16 +769,16 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;passes:&quot;</span><span class="p">,</span> <span class="nb">bool</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;errors:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">errors</span><span class="p">),</span> <span class="s2">&quot; warnings:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">warnings</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"passes:"</span><span class="p">,</span> <span class="nb">bool</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"errors:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">errors</span><span class="p">),</span> <span class="s2">" warnings:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">warnings</span><span class="p">))</span>
 
 <span class="n">worst</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">errors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;rule:      &quot;</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">rule</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;severity:  &quot;</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">severity</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;components:&quot;</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">components</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;location:  &quot;</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;value/limit:&quot;</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"rule:      "</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">rule</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"severity:  "</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">severity</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"components:"</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">components</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"location:  "</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"value/limit:"</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">,</span> <span class="n">worst</span><span class="o">.</span><span class="n">limit</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -808,7 +828,7 @@ Counter({&#39;short-segment&#39;: 4,
 <h2>Fixing them<a class="headerlink" href="#Fixing-them" title="Link to this heading">¶</a></h2>
 <p>Each finding names the physics it protects, so the fix is not arbitrary.</p>
 <ol class="arabic simple">
-<li><p><strong>``metal-overlap``</strong> – move <code class="docutils literal notranslate"><span class="pre">cross_v</span></code> clear of <code class="docutils literal notranslate"><span class="pre">cross_h</span></code>. If the crossing is deliberate, it needs an airbridge: those sit on their own layer and the rule is layer-aware, so a bridged crossing does not report.</p></li>
+<li><p><strong>``metal-overlap``</strong> – move <code class="docutils literal notranslate"><span class="pre">cross_v</span></code> clear of <code class="docutils literal notranslate"><span class="pre">cross_h</span></code>. If the crossing is deliberate, carry one line over the other on an airbridge. Drawing a bridge on top is not enough: the two lines still overlap on the base layer. See <em>Deliberate crossings</em> below.</p></li>
 <li><p><strong>``metal-spacing``</strong> – open the gap to 200 um. The 2 um default comes from published superconducting-chip rule sets; your foundry sets the real number.</p></li>
 <li><p><strong>``cpw-gap``</strong> – back to the standard 6 um. Narrow gaps push field into the substrate-metal interface, where two-level-system loss lives.</p></li>
 <li><p><strong>``chip-bounds``</strong> – pull the launchpad onto the die, or grow the die. Off-chip geometry is silently clipped by the GDS and FEM renderers.</p></li>
@@ -822,36 +842,36 @@ Counter({&#39;short-segment&#39;: 4,
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">design</span> <span class="o">=</span> <span class="n">new_design</span><span class="p">()</span>
 
-<span class="n">TransmonPocket</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;Q1&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">&quot;0mm&quot;</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">&quot;0mm&quot;</span><span class="p">))</span>
+<span class="n">TransmonPocket</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"Q1"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">"0mm"</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">"0mm"</span><span class="p">))</span>
 
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;cross_h&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;-2.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;2mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;-1.2mm&quot;</span><span class="p">,</span> <span class="s2">&quot;2mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;cross_v&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;-1.9mm&quot;</span><span class="p">,</span> <span class="s2">&quot;1.2mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;-1.9mm&quot;</span><span class="p">,</span> <span class="s2">&quot;1.7mm&quot;</span><span class="p">),</span> <span class="s2">&quot;270&quot;</span><span class="p">,</span> <span class="s2">&quot;90&quot;</span><span class="p">)</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;near_a&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;0.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;2.1mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;2.4mm&quot;</span><span class="p">,</span> <span class="s2">&quot;2.1mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;near_b&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;0.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;1.9mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;2.4mm&quot;</span><span class="p">,</span> <span class="s2">&quot;1.9mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"cross_h"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-2.6mm"</span><span class="p">,</span> <span class="s2">"2mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"-1.2mm"</span><span class="p">,</span> <span class="s2">"2mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"cross_v"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"1.2mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"1.7mm"</span><span class="p">),</span> <span class="s2">"270"</span><span class="p">,</span> <span class="s2">"90"</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"near_a"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"0.6mm"</span><span class="p">,</span> <span class="s2">"2.1mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"2.4mm"</span><span class="p">,</span> <span class="s2">"2.1mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"near_b"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"0.6mm"</span><span class="p">,</span> <span class="s2">"1.9mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"2.4mm"</span><span class="p">,</span> <span class="s2">"1.9mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
 <span class="n">link</span><span class="p">(</span>
     <span class="n">design</span><span class="p">,</span>
-    <span class="s2">&quot;thin&quot;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s2">&quot;-2.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-2.4mm&quot;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">&quot;-0.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-2.4mm&quot;</span><span class="p">),</span>
-    <span class="s2">&quot;180&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-    <span class="n">trace_gap</span><span class="o">=</span><span class="s2">&quot;6um&quot;</span><span class="p">,</span>
+    <span class="s2">"thin"</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">"-2.6mm"</span><span class="p">,</span> <span class="s2">"-2.4mm"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"-0.6mm"</span><span class="p">,</span> <span class="s2">"-2.4mm"</span><span class="p">),</span>
+    <span class="s2">"180"</span><span class="p">,</span>
+    <span class="s2">"0"</span><span class="p">,</span>
+    <span class="n">trace_gap</span><span class="o">=</span><span class="s2">"6um"</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">LaunchpadWirebond</span><span class="p">(</span>
-    <span class="n">design</span><span class="p">,</span> <span class="s2">&quot;LP&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">&quot;2.5mm&quot;</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">&quot;0mm&quot;</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;180&quot;</span><span class="p">)</span>
+    <span class="n">design</span><span class="p">,</span> <span class="s2">"LP"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">"2.5mm"</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">"0mm"</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">"180"</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="n">link</span><span class="p">(</span>
     <span class="n">design</span><span class="p">,</span>
-    <span class="s2">&quot;kink&quot;</span><span class="p">,</span>
-    <span class="p">(</span><span class="s2">&quot;0.9mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-2.6mm&quot;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">&quot;1.6mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-2.0mm&quot;</span><span class="p">),</span>
-    <span class="s2">&quot;180&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;90&quot;</span><span class="p">,</span>
+    <span class="s2">"kink"</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">"0.9mm"</span><span class="p">,</span> <span class="s2">"-2.6mm"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"1.6mm"</span><span class="p">,</span> <span class="s2">"-2.0mm"</span><span class="p">),</span>
+    <span class="s2">"180"</span><span class="p">,</span>
+    <span class="s2">"90"</span><span class="p">,</span>
     <span class="bp">cls</span><span class="o">=</span><span class="n">RoutePathfinder</span><span class="p">,</span>
-    <span class="n">fillet</span><span class="o">=</span><span class="s2">&quot;90um&quot;</span><span class="p">,</span>
+    <span class="n">fillet</span><span class="o">=</span><span class="s2">"90um"</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;hug&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;-1.5mm&quot;</span><span class="p">,</span> <span class="s2">&quot;0.7mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;1.5mm&quot;</span><span class="p">,</span> <span class="s2">&quot;0.7mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
-<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">&quot;split&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;-2.4mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-1.2mm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;2.4mm&quot;</span><span class="p">,</span> <span class="s2">&quot;-1.2mm&quot;</span><span class="p">),</span> <span class="s2">&quot;180&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"hug"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-1.5mm"</span><span class="p">,</span> <span class="s2">"0.7mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"1.5mm"</span><span class="p">,</span> <span class="s2">"0.7mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="s2">"split"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-2.4mm"</span><span class="p">,</span> <span class="s2">"-1.2mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"2.4mm"</span><span class="p">,</span> <span class="s2">"-1.2mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
 
 <span class="n">design</span><span class="o">.</span><span class="n">rebuild</span><span class="p">()</span>
 
@@ -865,7 +885,7 @@ Counter({&#39;short-segment&#39;: 4,
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Design rules passed (7 rules ran, no findings).
+Design rules passed (11 rules ran, no findings).
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -885,17 +905,129 @@ Design rules passed (7 rules ran, no findings).
 </div>
 </div>
 </section>
+<section id="Deliberate-crossings">
+<h2>Deliberate crossings<a class="headerlink" href="#Deliberate-crossings" title="Link to this heading">¶</a></h2>
+<p>The rules check metal on each layer. An <code class="docutils literal notranslate"><span class="pre">Airbridge</span></code> puts its span and landing pads on their own layers (30 and 31 by default), so placing one over the crossing changes nothing on layer 1: the two lines still overlap, and the check still reports a short.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_metal.qlibrary.tlines.airbridge</span><span class="w"> </span><span class="kn">import</span> <span class="n">Airbridge</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_metal.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">Waiver</span>
+
+<span class="n">crossing</span> <span class="o">=</span> <span class="n">new_design</span><span class="p">()</span>
+<span class="n">link</span><span class="p">(</span><span class="n">crossing</span><span class="p">,</span> <span class="s2">"cross_h"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-2.6mm"</span><span class="p">,</span> <span class="s2">"2mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"-1.2mm"</span><span class="p">,</span> <span class="s2">"2mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">crossing</span><span class="p">,</span> <span class="s2">"cross_v"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"1.4mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"2.6mm"</span><span class="p">),</span> <span class="s2">"270"</span><span class="p">,</span> <span class="s2">"90"</span><span class="p">)</span>
+<span class="n">Airbridge</span><span class="p">(</span>
+    <span class="n">crossing</span><span class="p">,</span> <span class="s2">"AB"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">"2mm"</span><span class="p">,</span> <span class="n">crossover_length</span><span class="o">=</span><span class="s2">"30um"</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">crossing</span><span class="o">.</span><span class="n">rebuild</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">validate</span><span class="p">(</span><span class="n">crossing</span><span class="p">)</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1 finding(s) from 11 rule(s): 1 error(s), 0 warning(s)
+  [error] metal-overlap: cross_h and cross_v overlap by 100 um^2 of metal on layer 1  @ (-1.9000, 2.0000)
+</pre></div></div>
+</div>
+<p>For a real crossover, cut the upper line where it crosses and connect the two cut ends to the bridge’s pins <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. The line is then continuous through the bridge, nothing overlaps on layer 1, and the check passes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">crossing</span> <span class="o">=</span> <span class="n">new_design</span><span class="p">()</span>
+<span class="n">link</span><span class="p">(</span><span class="n">crossing</span><span class="p">,</span> <span class="s2">"cross_v"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"1.4mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"2.6mm"</span><span class="p">),</span> <span class="s2">"270"</span><span class="p">,</span> <span class="s2">"90"</span><span class="p">)</span>
+<span class="n">OpenToGround</span><span class="p">(</span>
+    <span class="n">crossing</span><span class="p">,</span> <span class="s2">"h_west"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">"-2.6mm"</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">"2mm"</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">"180"</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">OpenToGround</span><span class="p">(</span>
+    <span class="n">crossing</span><span class="p">,</span> <span class="s2">"h_east"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">"-1.2mm"</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">"2mm"</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">"0"</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">Airbridge</span><span class="p">(</span>
+    <span class="n">crossing</span><span class="p">,</span> <span class="s2">"AB"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos_x</span><span class="o">=</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="n">pos_y</span><span class="o">=</span><span class="s2">"2mm"</span><span class="p">,</span> <span class="n">crossover_length</span><span class="o">=</span><span class="s2">"30um"</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># cross_h, cut in two at the bridge: west end -&gt; pin a, pin b -&gt; east end.</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">"cross_h_west"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"h_west"</span><span class="p">,</span> <span class="s2">"open"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"AB"</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s2">"cross_h_east"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"AB"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"h_east"</span><span class="p">,</span> <span class="s2">"open"</span><span class="p">)),</span>
+<span class="p">]:</span>
+    <span class="n">RouteStraight</span><span class="p">(</span>
+        <span class="n">crossing</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">,</span>
+        <span class="n">options</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span>
+            <span class="n">pin_inputs</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span>
+                <span class="n">start_pin</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pin</span><span class="o">=</span><span class="n">start</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                <span class="n">end_pin</span><span class="o">=</span><span class="n">Dict</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="n">end</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pin</span><span class="o">=</span><span class="n">end</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+            <span class="p">)</span>
+        <span class="p">),</span>
+    <span class="p">)</span>
+<span class="n">crossing</span><span class="o">.</span><span class="n">rebuild</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">validate</span><span class="p">(</span><span class="n">crossing</span><span class="p">)</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Design rules passed (11 rules ran, no findings).
+</pre></div></div>
+</div>
+<p>If the layout keeps the lines whole on purpose – for example, the crossovers are cut and bridged later in the mask flow – keep the crossing and record a <code class="docutils literal notranslate"><span class="pre">Waiver</span></code> instead. A waiver needs a reason, can be limited to one rule, the components involved and a maximum value, and does not hide anything: the waived finding is still listed in the report, it just no longer counts as an error. Do not widen the rule’s threshold instead; that would also hide real shorts.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">crossing</span> <span class="o">=</span> <span class="n">new_design</span><span class="p">()</span>
+<span class="n">link</span><span class="p">(</span><span class="n">crossing</span><span class="p">,</span> <span class="s2">"cross_h"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-2.6mm"</span><span class="p">,</span> <span class="s2">"2mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"-1.2mm"</span><span class="p">,</span> <span class="s2">"2mm"</span><span class="p">),</span> <span class="s2">"180"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
+<span class="n">link</span><span class="p">(</span><span class="n">crossing</span><span class="p">,</span> <span class="s2">"cross_v"</span><span class="p">,</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"1.4mm"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"-1.9mm"</span><span class="p">,</span> <span class="s2">"2.6mm"</span><span class="p">),</span> <span class="s2">"270"</span><span class="p">,</span> <span class="s2">"90"</span><span class="p">)</span>
+<span class="n">crossing</span><span class="o">.</span><span class="n">rebuild</span><span class="p">()</span>
+
+<span class="n">waiver</span> <span class="o">=</span> <span class="n">Waiver</span><span class="p">(</span>
+    <span class="s2">"cross_v is carried over cross_h on an airbridge in the mask flow"</span><span class="p">,</span>
+    <span class="n">rule</span><span class="o">=</span><span class="s2">"metal-overlap"</span><span class="p">,</span>
+    <span class="n">components</span><span class="o">=</span><span class="p">(</span><span class="s2">"cross_h"</span><span class="p">,</span> <span class="s2">"cross_v"</span><span class="p">),</span>
+    <span class="n">max_value</span><span class="o">=</span><span class="mf">200e-6</span><span class="p">,</span>  <span class="c1"># mm^2: this crossing overlaps by 100 um^2</span>
+<span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">validate</span><span class="p">(</span><span class="n">crossing</span><span class="p">,</span> <span class="n">waivers</span><span class="o">=</span><span class="p">[</span><span class="n">waiver</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"passes:"</span><span class="p">,</span> <span class="nb">bool</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+passes: True
+Design rules passed (11 rules ran, no findings).
+1 waived:
+  [error] metal-overlap: cross_h and cross_v overlap by 100 um^2 of metal on layer 1  @ (-1.9000, 2.0000)
+      waived: cross_v is carried over cross_h on an airbridge in the mask flow
+</pre></div></div>
+</div>
+</section>
 <section id="Tuning-the-rules">
 <h2>Tuning the rules<a class="headerlink" href="#Tuning-the-rules" title="Link to this heading">¶</a></h2>
 <p>Thresholds are constructor arguments, so a process design kit that differs from the defaults is a call, not a fork. Pass <code class="docutils literal notranslate"><span class="pre">rules=</span></code> to run a different set – either a subset, or the defaults with one swapped out.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_metal.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">DEFAULT_RULES</span><span class="p">,</span> <span class="n">CPWGapRule</span><span class="p">,</span> <span class="n">MetalSpacingRule</span>
 
 <span class="c1"># Just one rule, at a tighter limit than the default.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">validate</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="p">[</span><span class="n">CPWGapRule</span><span class="p">(</span><span class="n">min_gap</span><span class="o">=</span><span class="s2">&quot;10um&quot;</span><span class="p">)])</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">validate</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="p">[</span><span class="n">CPWGapRule</span><span class="p">(</span><span class="n">min_gap</span><span class="o">=</span><span class="s2">"10um"</span><span class="p">)])</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -916,15 +1048,15 @@ Design rules passed (7 rules ran, no findings).
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The 2 um default is a fabrication limit. A crosstalk budget is a separate,</span>
 <span class="c1"># much looser constraint -- unconnected CPWs kept 250 um apart. Replacing the</span>
 <span class="c1"># rule rather than adding one matters: both copies would run, and the design</span>
 <span class="c1"># would be reported twice.</span>
-<span class="n">house_rules</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">DEFAULT_RULES</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="s2">&quot;metal-spacing&quot;</span><span class="p">]</span>
-<span class="n">house_rules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MetalSpacingRule</span><span class="p">(</span><span class="n">min_spacing</span><span class="o">=</span><span class="s2">&quot;250um&quot;</span><span class="p">))</span>
+<span class="n">house_rules</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">DEFAULT_RULES</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="s2">"metal-spacing"</span><span class="p">]</span>
+<span class="n">house_rules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MetalSpacingRule</span><span class="p">(</span><span class="n">min_spacing</span><span class="o">=</span><span class="s2">"250um"</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">validate</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="n">house_rules</span><span class="p">)</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
 </pre></div>
@@ -935,18 +1067,18 @@ Design rules passed (7 rules ran, no findings).
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-1 finding(s) from 7 rule(s): 1 error(s), 0 warning(s)
+1 finding(s) from 11 rule(s): 1 error(s), 0 warning(s)
   [error] metal-spacing: near_a and near_b are 190.00 um apart (minimum 250.00 um)  @ (2.4000, 2.0000)
 </pre></div></div>
 </div>
 <p>Severity is an argument too. Promote a warning to an error when your process treats it as a hard rule, and the result turns falsy.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_metal.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">Severity</span>
 
-<span class="n">strict_gap</span> <span class="o">=</span> <span class="n">CPWGapRule</span><span class="p">(</span><span class="n">min_gap</span><span class="o">=</span><span class="s2">&quot;10um&quot;</span><span class="p">,</span> <span class="n">severity</span><span class="o">=</span><span class="n">Severity</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+<span class="n">strict_gap</span> <span class="o">=</span> <span class="n">CPWGapRule</span><span class="p">(</span><span class="n">min_gap</span><span class="o">=</span><span class="s2">"10um"</span><span class="p">,</span> <span class="n">severity</span><span class="o">=</span><span class="n">Severity</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">validate</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="p">[</span><span class="n">strict_gap</span><span class="p">])))</span>
 </pre></div>
 </div>
@@ -964,7 +1096,7 @@ False
 <h2>Failing the build<a class="headerlink" href="#Failing-the-build" title="Link to this heading">¶</a></h2>
 <p>In a design script or CI job you want the check to stop the run, not print. <code class="docutils literal notranslate"><span class="pre">strict=True</span></code> raises <code class="docutils literal notranslate"><span class="pre">DesignRuleViolation</span></code> on any error.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_metal.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">DesignRuleViolation</span>
@@ -972,7 +1104,7 @@ False
 <span class="k">try</span><span class="p">:</span>
     <span class="n">validate</span><span class="p">(</span><span class="n">design</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="p">[</span><span class="n">strict_gap</span><span class="p">],</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">except</span> <span class="n">DesignRuleViolation</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;build stopped:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"build stopped:"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -1000,7 +1132,7 @@ build stopped:
 <p>A rule is any object with a <code class="docutils literal notranslate"><span class="pre">name</span></code>, a <code class="docutils literal notranslate"><span class="pre">description</span></code>, and a <code class="docutils literal notranslate"><span class="pre">check(design)</span></code> that yields <code class="docutils literal notranslate"><span class="pre">Finding</span></code>s. Subclass <code class="docutils literal notranslate"><span class="pre">DesignRule</span></code> and use the same helpers the built-in rules use: <code class="docutils literal notranslate"><span class="pre">chip_bounds</span></code>, <code class="docutils literal notranslate"><span class="pre">component_geometry</span></code> (which unions each component’s drawn metal, per layer if you ask), and <code class="docutils literal notranslate"><span class="pre">representative_point</span></code>.</p>
 <p>Here is a fab rule the defaults do not cover: nothing may reach into the dicing street at the die edge.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">box</span>
@@ -1015,12 +1147,12 @@ build stopped:
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">KeepOutBorderRule</span><span class="p">(</span><span class="n">DesignRule</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Metal must stay clear of the dicing street at the chip edge.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Metal must stay clear of the dicing street at the chip edge."""</span>
 
-    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;keep-out-border&quot;</span>
-    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Metal reaches into the dicing street.&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">"keep-out-border"</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">"Metal reaches into the dicing street."</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">margin</span><span class="o">=</span><span class="s2">&quot;400um&quot;</span><span class="p">,</span> <span class="n">severity</span><span class="o">=</span><span class="n">Severity</span><span class="o">.</span><span class="n">ERROR</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">margin</span><span class="o">=</span><span class="s2">"400um"</span><span class="p">,</span> <span class="n">severity</span><span class="o">=</span><span class="n">Severity</span><span class="o">.</span><span class="n">ERROR</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">margin</span> <span class="o">=</span> <span class="n">margin</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">severity</span> <span class="o">=</span> <span class="n">severity</span>
 
@@ -1037,7 +1169,7 @@ build stopped:
                 <span class="n">rule</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
                 <span class="n">severity</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">severity</span><span class="p">,</span>
                 <span class="n">message</span><span class="o">=</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> reaches </span><span class="si">{</span><span class="n">margin</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> um into the dicing street&quot;</span>
+                    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> reaches </span><span class="si">{</span><span class="n">margin</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> um into the dicing street"</span>
                 <span class="p">),</span>
                 <span class="n">components</span><span class="o">=</span><span class="p">(</span><span class="n">name</span><span class="p">,),</span>
                 <span class="n">location</span><span class="o">=</span><span class="n">representative_point</span><span class="p">(</span><span class="n">outside</span><span class="p">),</span>
@@ -1115,12 +1247,12 @@ build stopped:
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="2.31-Create-a-QComponent-Basic.html">
+          <a class="next-page" href="FlipChip-design-tutorial.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">2.31 Create a QComponent - Basic</div>
+                <div class="title">Flip-Chip Devices in Quantum Metal</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -1145,7 +1277,7 @@ build stopped:
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on 2026/08/07</div>
+              Last updated on 2026/10/13</div>
           </div>
           <div class="right-details">
             
@@ -1171,6 +1303,7 @@ build stopped:
 <li><a class="reference internal" href="#Run-the-checks">Run the checks</a></li>
 <li><a class="reference internal" href="#Reading-the-result">Reading the result</a></li>
 <li><a class="reference internal" href="#Fixing-them">Fixing them</a></li>
+<li><a class="reference internal" href="#Deliberate-crossings">Deliberate crossings</a></li>
 <li><a class="reference internal" href="#Tuning-the-rules">Tuning the rules</a></li>
 <li><a class="reference internal" href="#Failing-the-build">Failing the build</a></li>
 <li><a class="reference internal" href="#Writing-your-own-rule">Writing your own rule</a></li>
@@ -1187,7 +1320,7 @@ build stopped:
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=486e5634"></script>
+</div><script src="../../_static/documentation_options.js?v=39bb1c6d"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/furo.js?v=46bd48cc"></script>

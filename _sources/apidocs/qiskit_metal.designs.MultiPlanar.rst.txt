@@ -21,6 +21,7 @@ MultiPlanar
    .. autoattribute:: MultiPlanar.qgeometry
    .. autoattribute:: MultiPlanar.qnet
    .. autoattribute:: MultiPlanar.renderers
+   .. autoattribute:: MultiPlanar.skipped_renderers
    .. autoattribute:: MultiPlanar.template_options
    .. autoattribute:: MultiPlanar.template_renderer_options
    .. autoattribute:: MultiPlanar.variables
@@ -31,6 +32,7 @@ MultiPlanar
    
    .. rubric:: Methods
    
+   .. automethod:: MultiPlanar.__getitem__
    .. automethod:: MultiPlanar.add_default_data_for_qgeometry_tables
    .. automethod:: MultiPlanar.add_dependency
    .. automethod:: MultiPlanar.all_component_names_id
